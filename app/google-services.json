@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "142613251408",
+    "firebase_url": "https://oado-73739.firebaseio.com",
+    "project_id": "oado-73739",
+    "storage_bucket": "oado-73739.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142613251408:android:37b38faa3071c31d",
+        "android_client_info": {
+          "package_name": "com.oado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142613251408-6hdhgthdarv28lcvqta58rho07kmaock.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB04zGDj7NuAQbwnRHWC5Yn4RWeIHp_uVU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

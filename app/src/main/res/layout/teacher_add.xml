@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="30dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/item_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/no_image"
+                app:civ_border_color="@color/app_blue"
+                app:civ_border_width="2dp" />
+
+
+            <EditText
+                android:id="@+id/teacher_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Teacher Name"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+            <EditText
+                android:id="@+id/selected_subject_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint=""
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/rel_subject_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/app_blue_border"
+                android:layout_marginTop="10dp"
+                >
+
+                <Spinner
+                    android:id="@+id/spinner_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:paddingEnd="20dp"
+                    android:backgroundTint="@color/app_blue"
+                    >
+                </Spinner>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:paddingStart="@dimen/edit_field_padding"
+                android:paddingEnd="@dimen/edit_field_padding"
+                >
+
+                <TextView
+                    android:id="@+id/tv_gender_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:paddingStart="4dp"
+                    android:paddingTop="@dimen/edit_field_padding"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="@dimen/edit_field_padding"
+                    android:textColor="@color/app_blue"
+                    android:text="Gender :"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentEnd="true"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/radio_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:checked="true"
+                        android:buttonTint="@color/app_blue"
+                        android:text="Male"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/radio_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginStart="5dp"
+                        android:buttonTint="@color/app_blue"
+                        android:text="Female"
+                        />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:paddingStart="@dimen/edit_field_padding"
+                android:paddingTop="4dp"
+                android:paddingEnd="@dimen/edit_field_padding"
+                android:paddingBottom="4dp"
+                >
+
+                <EditText
+                    android:id="@+id/edt_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:enabled="false"
+                    android:background="@color/white"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/app_blue"
+                    android:hint="DOB"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_calender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@mipmap/calender"
+                    />
+
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/phone_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Phone No"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:maxLength="10"
+                android:inputType="phone"
+                android:textColor="@color/app_blue"
+                />
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Email"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/app_blue"
+                />
+
+
+            <EditText
+                android:id="@+id/street_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Street Address"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+
+            <EditText
+                android:id="@+id/city_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="City Name"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+
+            <EditText
+                android:id="@+id/state_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="State Name"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+
+            <EditText
+                android:id="@+id/country_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Country Name"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+
+            <EditText
+                android:id="@+id/pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Pincode"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:inputType="number"
+                android:textColor="@color/app_blue"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/rel_create_teacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:padding="@dimen/relative_button_padding"
+                android:background="@drawable/app_blue_rectangle">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/add_white" />
+
+                    <TextView
+                        android:id="@+id/tv_button_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create Teacher"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"></RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

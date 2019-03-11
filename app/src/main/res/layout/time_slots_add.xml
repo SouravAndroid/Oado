@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rel_create_time_slots"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="30dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/app_blue_border"
+                >
+
+                <Spinner
+                    android:id="@+id/spinner_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:paddingEnd="20dp"
+                    android:backgroundTint="@color/app_blue"
+                    >
+                </Spinner>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/app_blue_border"
+                android:layout_marginTop="10dp"
+                >
+
+                <Spinner
+                    android:id="@+id/spinner_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:paddingEnd="20dp"
+                    android:backgroundTint="@color/app_blue"
+                    >
+                </Spinner>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/app_blue_border"
+                android:layout_marginTop="10dp"
+                >
+
+                <Spinner
+                    android:id="@+id/spinner_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:paddingEnd="20dp"
+                    android:backgroundTint="@color/app_blue"
+                    >
+                </Spinner>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/app_blue_border"
+                android:layout_marginTop="10dp"
+                >
+
+                <Spinner
+                    android:id="@+id/spinner_teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:paddingEnd="20dp"
+                    android:backgroundTint="@color/app_blue"
+                    >
+                </Spinner>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/app_blue_border"
+                android:layout_marginTop="10dp"
+                >
+
+                <Spinner
+                    android:id="@+id/spinner_week_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:paddingEnd="20dp"
+                    android:backgroundTint="@color/app_blue"
+                    >
+                </Spinner>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_week_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                />
+
+
+            <TextView
+                android:id="@+id/start_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Start Time"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="End Time"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"></RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rel_create_time_slots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="@dimen/relative_button_padding"
+        android:background="@drawable/app_blue_rectangle"
+        android:layout_alignParentBottom="true"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_centerInParent="true"
+            >
+
+            <ImageView
+                android:id="@+id/iv_plus"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/add_white" />
+
+            <TextView
+                android:id="@+id/tv_button_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

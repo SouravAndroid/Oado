@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oado">
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/oado_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/oado_launcher"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:name=".utils.GlobalClass"
+        android:theme="@style/AppTheme">
+
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+
+
+        <activity
+            android:name=".activity.Splash"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.Login"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.DrawerActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+        </activity>
+
+
+        <activity
+            android:name=".activity.InstituteAdd"
+            android:label="Create Institute"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.SectionAdd"
+            android:label="Create Section"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.ClassAdd"
+            android:label="Create Class"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.TeacherAdd"
+            android:label="Create Teacher"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.StudentAdd"
+            android:label="Create Student"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.OthersStaffAdd"
+            android:label="Create Staff"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.SubjectAdd"
+            android:label="Create Subject"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.TimeSlotsAdd"
+            android:label="Create Time Slot"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.InAttendanceByTeacher"
+            android:label="Attendance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.AttendanceReport"
+            android:label="Attendance Report"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.ExamResult"
+            android:label="Exam Results"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+
+        <activity
+            android:name=".activity.ExamList"
+            android:label="Exam"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.ExamResultView"
+            android:label="Exam Scores"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.MessagesScreen"
+            android:label="Messages"
+            android:theme="@style/MyMaterialTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.ComposeMessage"
+            android:label="Compose Messages"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.DiaryAdd"
+            android:label="Add Dairy"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.YoutubePlayerActivity"
+            android:label="Youtube"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.FeesAdd"
+            android:label="Add Fees"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.FeesSubmitAndReport"
+            android:label="Fees Submit &amp; Report"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.FeesPaidReportScreen"
+            android:label="Fees Report"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.FeesSubmit_Add"
+            android:label="Fees Submit"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.GuardianView"
+            android:label="Add Fees"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.ProfileView"
+            android:label="Profile Details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.ChangePassword"
+            android:label="Change Password"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+
+        <activity
+            android:name=".activity.DiaryMessageSingle"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.InboxMessages"
+            android:label="Inbox"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+
+        <activity
+            android:name=".activity.OutAttendanceByTeacher"
+            android:label="Out Attendance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.NotificationActivity"
+            android:label="Notifications"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+
+
+        <activity android:name=".barcode.FullScannerActivity"
+            android:theme="@style/AppOverlayTheme"
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:label="Scanner">
+            <meta-data android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+
+
+
+
+
+
+        <service android:name=".services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+
+
+
+
+    </application>
+
+</manifest>

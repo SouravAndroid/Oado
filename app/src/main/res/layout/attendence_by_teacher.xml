@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_grey"
+    android:animateLayoutChanges="true">
+
+    <TextView
+        android:id="@+id/tv_select_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/app_blue"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:textStyle="bold"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/present_submit"
+        android:layout_below="@+id/tv_select_filter"
+        />
+
+
+    <Button
+        android:id="@+id/present_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/done"
+        android:textColor="@color/white"
+        android:background="@drawable/app_blue_rectangle"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/oado_300"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/linear_fields"
+        android:layout_marginBottom="30dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear_fields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        >
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/app_blue_border"
+            android:drawablePadding="5dp"
+            android:drawableStart="@mipmap/email"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="@dimen/edit_field_padding"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:textColor="@color/app_blue"
+            android:gravity="center_vertical"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/app_blue_border"
+            android:layout_marginTop="15dp"
+            android:padding="1dp"
+            >
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/view_password"
+                android:background="@drawable/white_background"
+                android:drawablePadding="5dp"
+                android:drawableStart="@mipmap/password"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="@dimen/edit_field_padding"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                android:layout_centerVertical="true"
+                />
+
+
+            <ImageView
+                android:id="@+id/view_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:src="@mipmap/eye_gray"
+                />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/signIn"
+            android:textColor="@color/white"
+            android:background="@drawable/app_blue_rectangle"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/dark_grey"
+            android:padding="5dp"
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="15dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="About Us"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Contact Us"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/id_institute_school_for_admin"
+            android:title="Select Institute/School" />
+
+        <item
+            android:id="@+id/id_home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/id_dairy"
+            android:title="My Diary" />
+
+        <item
+            android:id="@+id/id_create_post"
+            android:title="Post On Diary" />
+
+        <item
+            android:id="@+id/id_institutes"
+            android:title="Institutes" />
+
+        <item
+            android:id="@+id/id_class"
+            android:title="Class" />
+
+        <item
+            android:id="@+id/id_section"
+            android:title="Section" />
+
+        <item
+            android:id="@+id/id_subject"
+            android:title="Subject" />
+
+        <item
+            android:id="@+id/id_teacher"
+            android:title="Teacher" />
+
+        <item
+            android:id="@+id/id_time_slots"
+            android:title="Time Slots" />
+
+        <item
+            android:id="@+id/id_student"
+            android:title="Student" />
+
+        <item
+            android:id="@+id/id_guardian"
+            android:title="Guardian" />
+
+        <item
+            android:id="@+id/id_other_staff"
+            android:title="Others Staff" />
+
+
+        <item
+            android:id="@+id/id_attendance_scan"
+            android:title="Scan Attendance Code" />
+
+        <item
+            android:id="@+id/id_attendance_in"
+            android:title="Attendance IN" />
+
+        <item
+            android:id="@+id/id_attendance_out"
+            android:title="Attendance OUT" />
+
+        <item
+            android:id="@+id/id_attendance_report"
+            android:title="Attendance Report" />
+
+        <item
+            android:id="@+id/id_create_exam_result"
+            android:title="Create Exam Result" />
+
+        <item
+            android:id="@+id/id_exam_result"
+            android:title="Exam Result" />
+
+        <item
+            android:id="@+id/id_fees_create"
+            android:title="Create Fees" />
+
+        <item
+            android:id="@+id/id_fees_submit_report"
+            android:title="Fees Submit &amp; Report" />
+
+        <item
+            android:id="@+id/id_messages"
+            android:title="Messages" />
+
+        <item
+            android:id="@+id/id_notifications"
+            android:title="Notifications" />
+
+        <item
+            android:id="@+id/id_sms_report"
+            android:title="SMS Report" />
+
+
+    </group>
+
+   <!-- <item
+        android:title="Message :"
+        android:checkable="true"
+        >
+        <menu>
+            <item
+                android:id="@+id/compose"
+                android:title="Compose" />
+            <item
+                android:id="@+id/inbox"
+                android:title="Inbox" />
+
+            <item
+                android:id="@+id/draft"
+                android:title="Draft" />
+
+            <item
+                android:id="@+id/sent"
+                android:title="Sent" />
+
+            <item
+                android:id="@+id/favourite"
+                android:title="Favourite" />
+        </menu>
+
+    </item>-->
+
+    <item android:title="More :">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/facebook_page"
+                    android:title="Facebook Like" />
+
+                <item
+                    android:id="@+id/about_us"
+                    android:title="About Us" />
+
+                <item
+                    android:id="@+id/contact_us"
+                    android:title="Contact Us" />
+
+                <item
+                    android:id="@+id/faqs"
+                    android:title="FAQs" />
+
+                <item
+                    android:id="@+id/privacy_policy"
+                    android:title="Privacy Policy" />
+
+            </group>
+
+        </menu>
+
+    </item>
+
+</menu>

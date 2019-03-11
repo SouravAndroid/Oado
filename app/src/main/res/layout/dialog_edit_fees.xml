@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_blue"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:id="@+id/edt_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/app_blue_border"
+            android:hint="Enter amount"
+            android:padding="@dimen/edit_field_padding"
+            android:textSize="14sp"
+            android:inputType="numberDecimal"
+            android:textColor="@color/app_blue"
+            />
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rel_update_fees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:padding="@dimen/relative_button_padding"
+            android:background="@drawable/app_blue_rectangle"
+            android:layout_alignParentBottom="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Amount"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

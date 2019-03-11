@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="30dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/item_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/no_image"
+                app:civ_border_color="@color/app_blue"
+                app:civ_border_width="2dp" />
+
+
+            <EditText
+                android:id="@+id/institute_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Institute Name"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+            <EditText
+                android:id="@+id/institute_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Institute Code"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+            <EditText
+                android:id="@+id/board_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Board Name"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+            <EditText
+                android:id="@+id/institute_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Mobile number"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:inputType="phone"
+                android:textColor="@color/app_blue"
+                />
+
+            <EditText
+                android:id="@+id/institute_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Email id"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/app_blue"
+                />
+
+            <EditText
+                android:id="@+id/street_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Street Address"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+            <EditText
+                android:id="@+id/city_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="City Name"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+            <EditText
+                android:id="@+id/state_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="State Name"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+            <EditText
+                android:id="@+id/country_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Country Name"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:textColor="@color/app_blue"
+                />
+
+            <EditText
+                android:id="@+id/pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint="Pincode"
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:textColor="@color/app_blue"
+                />
+
+
+            <EditText
+                android:id="@+id/institute_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app_blue_border"
+                android:hint=""
+                android:padding="@dimen/edit_field_padding"
+                android:textSize="14sp"
+                android:inputType="number"
+                android:textColor="@color/app_blue"
+                />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:id="@+id/radioGroup"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/institute_type_school"
+                    android:id="@+id/radioSchool"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/institute_type_coaching"
+                    android:id="@+id/radioCoaching"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    />
+
+            </RadioGroup>
+
+
+
+            <CheckBox
+                android:id="@+id/cb_sms_subscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/app_blue"
+                android:hint="Sms Subscription"
+                android:padding="@dimen/edit_field_padding" />
+
+
+            <RelativeLayout
+                android:id="@+id/rel_create_institute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:padding="@dimen/relative_button_padding"
+                android:background="@drawable/app_blue_rectangle">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/add_white" />
+
+                    <TextView
+                        android:id="@+id/tv_button_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create Institute"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"></RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

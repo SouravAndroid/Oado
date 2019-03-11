@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_grey"
+    android:animateLayoutChanges="true">
+
+    <TextView
+        android:id="@+id/tv_student_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/app_blue"
+        android:padding="10dp"
+        android:textStyle="bold"
+        />
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_blue_border"
+        android:layout_margin="8dp"
+        android:padding="2dp"
+        app:queryHint="Search here"
+        android:iconifiedByDefault="false"
+        android:layout_below="@+id/tv_student_info"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_fees_report"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchView"
+        android:layout_above="@+id/rel_fees_submit"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rel_fees_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="@dimen/relative_button_padding"
+        android:background="@drawable/app_blue_rectangle"
+        android:layout_alignParentBottom="true"
+        >
+
+        <TextView
+            android:id="@+id/tv_button_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next to Fees Submit"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
