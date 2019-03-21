@@ -217,8 +217,10 @@ public class HomeFrag_AllListAdapter extends RecyclerView.Adapter<HomeFrag_AllLi
                 @Override
                 public void onClick(View v) {
 
-                    DialogImage dialogImage = new DialogImage(context, diaryMessage.getPhoto());
-                    dialogImage.show();
+
+                    Intent intent = new Intent(context, DialogImage.class);
+                    intent.putExtra("url", diaryMessage.getPhoto());
+                    context.startActivity(intent);
 
                 }
             });

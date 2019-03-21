@@ -212,8 +212,9 @@ public class OthersStaffListAdapter extends RecyclerView.Adapter<OthersStaffList
             @Override
             public void onClick(View v) {
 
-                DialogImage dialogImage = new DialogImage(context, staffData.getImage());
-                dialogImage.show();
+                Intent intent = new Intent(context, DialogImage.class);
+                intent.putExtra("url", staffData.getImage());
+                context.startActivity(intent);
 
             }
         });

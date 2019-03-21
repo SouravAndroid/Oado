@@ -200,8 +200,9 @@ public class InboxListAdapter extends RecyclerView.Adapter<InboxListAdapter.MyVi
                 @Override
                 public void onClick(View v) {
 
-                    DialogImage dialogImage = new DialogImage(context, diaryMessage.getPhoto());
-                    dialogImage.show();
+                    Intent intent = new Intent(context, DialogImage.class);
+                    intent.putExtra("url", diaryMessage.getPhoto());
+                    context.startActivity(intent);
 
                 }
             });

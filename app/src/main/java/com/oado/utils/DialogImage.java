@@ -1,13 +1,11 @@
 package com.oado.utils;
 
-import android.app.Dialog;
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.jsibbold.zoomage.ZoomageView;
@@ -16,52 +14,51 @@ import com.squareup.picasso.Picasso;
 
 import es.dmoral.toasty.Toasty;
 
-public class DialogImage extends Dialog {
+public class DialogImage extends AppCompatActivity {
 
-    private Context context;
-    private String image_url;
-   // private ImageView goProDialogImage;
-
-
-    public DialogImage(@NonNull Context context, String image_url) {
-        super(context);
-        this.context = context;
-        this.image_url = image_url;
-
-    }
+    String image_url;
 
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.dialog_image);
-        setCanceledOnTouchOutside(false);
-      //  goProDialogImage = findViewById(R.id.goProDialogImage);
-
 
         final ZoomageView myZoomageView = findViewById(R.id.myZoomageView);
 
-        Picasso.with(context).load(image_url).placeholder(R.mipmap.no_image)
-                .into(myZoomageView, new com.squareup.picasso.Callback() {
-                    @Override
-                    public void onSuccess() {
 
-                    }
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null){
+            image_url = bundle.getString("url");
 
-                    @Override
-                    public void onError() {
-                        Bitmap icon = BitmapFactory.decodeResource(context.getResources(),
-                                R.mipmap.no_image);
 
-                        myZoomageView.setImageBitmap(icon);
+            Picasso.with(this).load(image_url).placeholder(R.mipmap.no_image)
+                    .into(myZoomageView, new com.squareup.picasso.Callback() {
+                        @Override
+                        public void onSuccess() {
 
-                        Toasty.error(context,
-                                "No image available",
-                                Toast.LENGTH_LONG, true).show();
+                        }
 
-                        dismiss();
-                    }
-                });
+                        @Override
+                        public void onError() {
+                            Bitmap icon = BitmapFactory.decodeResource(getResources(),
+                                    R.mipmap.no_image);
+
+                            myZoomageView.setImageBitmap(icon);
+
+                            Toasty.error(getApplicationContext(),
+                                    "No image available",
+                                    Toast.LENGTH_LONG, true).show();
+
+                        }
+                    });
+
+
+        }
+
+
+
 
 
     }

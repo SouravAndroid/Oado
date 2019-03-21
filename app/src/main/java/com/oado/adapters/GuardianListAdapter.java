@@ -202,8 +202,10 @@ public class GuardianListAdapter extends RecyclerView.Adapter<GuardianListAdapte
             @Override
             public void onClick(View v) {
 
-                DialogImage dialogImage = new DialogImage(context, guardianData.getImage());
-                dialogImage.show();
+                Intent intent = new Intent(context, DialogImage.class);
+                intent.putExtra("url", guardianData.getImage());
+                context.startActivity(intent);
+
             }
         });
 

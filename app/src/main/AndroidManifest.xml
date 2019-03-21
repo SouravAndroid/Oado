@@ -293,6 +293,14 @@
         </activity>
 
 
+        <activity
+            android:name=".utils.DialogImage"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+
+
 
         <activity android:name=".barcode.FullScannerActivity"
             android:theme="@style/AppOverlayTheme"

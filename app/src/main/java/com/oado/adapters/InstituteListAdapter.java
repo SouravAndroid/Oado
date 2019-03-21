@@ -223,8 +223,11 @@ public class InstituteListAdapter extends RecyclerView.Adapter<InstituteListAdap
             @Override
             public void onClick(View v) {
 
-                DialogImage dialogImage = new DialogImage(context, instituteData.getImage());
-                dialogImage.show();
+                Intent intent = new Intent(context, DialogImage.class);
+                intent.putExtra("url", instituteData.getImage());
+                context.startActivity(intent);
+
+
             }
         });
 

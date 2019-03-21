@@ -200,8 +200,11 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
             @Override
             public void onClick(View v) {
 
-                DialogImage dialogImage = new DialogImage(context, studentData.getImage());
-                dialogImage.show();
+                Intent intent = new Intent(context, DialogImage.class);
+                intent.putExtra("url", studentData.getImage());
+                context.startActivity(intent);
+
+
             }
         });
 
