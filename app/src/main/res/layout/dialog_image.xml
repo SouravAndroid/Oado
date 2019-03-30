@@ -3,20 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-
-    <!--<ImageView
-        android:id="@+id/goProDialogImage"
-        android:layout_width="wrap_content"
-        android:layout_height="350dp"
-        android:src="@mipmap/no_image"
-        android:layout_margin="20dp"
-        />-->
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    >
 
     <com.jsibbold.zoomage.ZoomageView
         android:id="@+id/myZoomageView"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="match_parent"
         android:src="@mipmap/no_image"
         app:zoomage_restrictBounds="false"
         app:zoomage_animateOnReset="true"
@@ -26,7 +20,6 @@
         app:zoomage_translatable="true"
         app:zoomage_minScale="0.6"
         app:zoomage_maxScale="8"
-        android:layout_margin="10dp"
         android:layout_centerInParent="true"
         />
 

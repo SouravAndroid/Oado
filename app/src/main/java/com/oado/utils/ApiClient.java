@@ -123,6 +123,9 @@ public class ApiClient {
     public static final String lock_unlock_status =      BASE_URL + "lock_unlock_status";
     public static final String fcm_token_update =        BASE_URL + "fcm_token_update";
 
+    public static final String get_monthly_sms_report =
+            BASE_URL + "get_monthly_sms_report";
+
     public static final String get_subject_list_student =
             BASE_URL + "get_subject_list_student";
 

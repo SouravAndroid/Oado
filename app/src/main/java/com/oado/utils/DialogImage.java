@@ -5,7 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Window;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.jsibbold.zoomage.ZoomageView;
@@ -22,8 +22,13 @@ public class DialogImage extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.dialog_image);
+
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+
 
         final ZoomageView myZoomageView = findViewById(R.id.myZoomageView);
 
@@ -63,5 +68,21 @@ public class DialogImage extends AppCompatActivity {
 
     }
 
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+
+            case android.R.id.home:
+                finish();
+                break;
+            default:
+                break;
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
 }
