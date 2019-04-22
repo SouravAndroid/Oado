@@ -140,6 +140,12 @@ public class ApiClient {
 
 
 
+    public static final String ABOUT_US_URL = "https://oado.in/about-us.html";
+    public static final String CONTACT_US_URL = "https://oado.in/contact-us.html";
+    public static final String PRIVACY_POLICY_URL = "https://oado.in/privacy_policy.html";
+    public static final String FAQ_URL = "https://oado.in/faq.html";
+
+
     // parameter ...
 
     public static final String institute_id = "institute_id";
@@ -230,6 +236,7 @@ public class ApiClient {
     public static final String fcm_reg_token = "fcm_reg_token";
     public static final String from_date = "from_date";
     public static final String to_date = "to_date";
+    public static final String sms_subsription = "sms_subsription";
 
 
 

@@ -506,17 +506,37 @@ public class DrawerActivity extends AppCompatActivity
 
             case R.id.about_us:
 
+                intent = new Intent(DrawerActivity.this,
+                        WebViewScreen.class);
+                intent.putExtra("url", ApiClient.ABOUT_US_URL);
+                setMyIntent(intent);
+
                 break;
 
             case R.id.contact_us:
+
+                intent = new Intent(DrawerActivity.this,
+                        WebViewScreen.class);
+                intent.putExtra("url", ApiClient.FAQ_URL);
+                setMyIntent(intent);
 
                 break;
 
             case R.id.faqs:
 
+                intent = new Intent(DrawerActivity.this,
+                        WebViewScreen.class);
+                intent.putExtra("url", ApiClient.FAQ_URL);
+                setMyIntent(intent);
+
                 break;
 
             case R.id.privacy_policy:
+
+                intent = new Intent(DrawerActivity.this,
+                        WebViewScreen.class);
+                intent.putExtra("url", ApiClient.PRIVACY_POLICY_URL);
+                setMyIntent(intent);
 
                 break;
 

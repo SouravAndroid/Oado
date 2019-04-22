@@ -123,6 +123,7 @@ public class StudentAdd extends AppCompatActivity implements View.OnClickListene
     @BindView(R.id.country_name_guardian) EditText country_name_guardian;
     @BindView(R.id.pincode_guardian) EditText pincode_guardian;
     @BindView(R.id.card_view_guardian) CardView card_view_guardian;
+    @BindView(R.id.cb_sms_subscription) CheckBox cb_sms_subscription;
 
 
     private int PICK_IMAGE_REQUEST_STUDENT = 11;
@@ -149,7 +150,8 @@ public class StudentAdd extends AppCompatActivity implements View.OnClickListene
 
     MySpinnerAdapter spinnerAdapter;
     SubjectSpinnerAdapter subjectSpinnerAdapter;
-    String click_on_image;
+    String click_on_image, sms_subsription;
+
 
     Calendar myCalendar = Calendar.getInstance();
 
@@ -1267,8 +1269,11 @@ public class StudentAdd extends AppCompatActivity implements View.OnClickListene
         }
 
 
-
-
+        if (cb_sms_subscription.isChecked()){
+            sms_subsription = "Y";
+        }else {
+            sms_subsription = "N";
+        }
 
 
         if (type.matches("add")){
@@ -1401,6 +1406,7 @@ public class StudentAdd extends AppCompatActivity implements View.OnClickListene
         params.put(ApiClient.country, country_name_guardian.getText().toString());
         params.put(ApiClient.pincode, pincode_guardian.getText().toString());
         params.put(ApiClient.login_type, ApiClient.guardian);
+        params.put(ApiClient.sms_subsription, sms_subsription);
 
         try{
 

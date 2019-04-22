@@ -256,6 +256,7 @@ public class Guardian extends Fragment implements SearchView.OnQueryTextListener
                                 guardianData.setStudent_email(object.optString("student_email"));
                                 guardianData.setClass_name(object.optString("class_name"));
                                 guardianData.setSection_name(object.optString("section_name"));
+                                guardianData.setSms_subsription(object.optString("sms_subsription"));
 
                                 if (userPermissionCheck.isGuardian() ||
                                         userPermissionCheck.isStudent()){

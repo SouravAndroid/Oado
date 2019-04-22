@@ -93,6 +93,7 @@ public class GuardianView extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.tv_button_title) TextView tv_button_title;
     @BindView(R.id.rel_action_guardian) RelativeLayout rel_action_guardian;
     @BindView(R.id.rel_relation) RelativeLayout rel_relation;
+    @BindView(R.id.cb_sms_subscription) CheckBox cb_sms_subscription;
 
 
     private int PICK_IMAGE_REQUEST_GUARDIAN = 2;
@@ -107,7 +108,7 @@ public class GuardianView extends AppCompatActivity implements View.OnClickListe
     String type, s_guardian_relation;
     ArrayList<HashMap<String, String>> list_Relation;
     MySpinnerAdapter spinnerAdapter;
-    String click_on_image;
+    String click_on_image, sms_subsription;
     GuardianData guardianData;
 
     Calendar myCalendar = Calendar.getInstance();
@@ -247,6 +248,12 @@ public class GuardianView extends AppCompatActivity implements View.OnClickListe
                 pincode_guardian.setSelection(pincode_guardian.length());
 
 
+                if (guardianData.getSms_subsription().equals("Y")){
+                    cb_sms_subscription.setChecked(true);
+                }else {
+                    cb_sms_subscription.setChecked(false);
+                }
+
 
 
             }else if (type.matches("view")){
@@ -311,7 +318,12 @@ public class GuardianView extends AppCompatActivity implements View.OnClickListe
                 pincode_guardian.setEnabled(false);
 
 
-
+                if (guardianData.getSms_subsription().equals("Y")){
+                    cb_sms_subscription.setChecked(true);
+                }else {
+                    cb_sms_subscription.setChecked(false);
+                }
+                cb_sms_subscription.setEnabled(false);
 
             }
 
@@ -646,6 +658,11 @@ public class GuardianView extends AppCompatActivity implements View.OnClickListe
         }
 
 
+        if (cb_sms_subscription.isChecked()){
+            sms_subsription = "Y";
+        }else {
+            sms_subsription = "N";
+        }
 
 
 
@@ -678,6 +695,7 @@ public class GuardianView extends AppCompatActivity implements View.OnClickListe
         params.put(ApiClient.state, state_name_guardian.getText().toString());
         params.put(ApiClient.country, country_name_guardian.getText().toString());
         params.put(ApiClient.pincode, pincode_guardian.getText().toString());
+        params.put(ApiClient.sms_subsription, sms_subsription);
 
         try{
 

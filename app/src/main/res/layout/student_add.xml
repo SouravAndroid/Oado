@@ -629,6 +629,15 @@
                             />
 
 
+                        <CheckBox
+                            android:id="@+id/cb_sms_subscription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:buttonTint="@color/app_blue"
+                            android:hint="Sms Subscription"
+                            android:padding="@dimen/edit_field_padding" />
+
 
                     </LinearLayout>
 

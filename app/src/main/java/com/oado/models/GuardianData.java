@@ -23,6 +23,7 @@ public class GuardianData implements Serializable {
     private String student_email;
     private String class_name;
     private String section_name;
+    private String sms_subsription;
 
 
     public String getId() {
@@ -160,5 +161,13 @@ public class GuardianData implements Serializable {
 
     public void setSection_name(String section_name) {
         this.section_name = section_name;
+    }
+
+    public String getSms_subsription() {
+        return sms_subsription;
+    }
+
+    public void setSms_subsription(String sms_subsription) {
+        this.sms_subsription = sms_subsription;
     }
 }
