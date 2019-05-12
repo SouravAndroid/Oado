@@ -126,13 +126,13 @@ public class SelectInstituteForAdmin extends Fragment {
             }
         });
 
-
+        getAllInstitute();
     }
 
     @Override
     public void onResume() {
 
-        getAllInstitute();
+
 
         super.onResume();
     }

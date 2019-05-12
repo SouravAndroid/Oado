@@ -517,7 +517,7 @@ public class DrawerActivity extends AppCompatActivity
 
                 intent = new Intent(DrawerActivity.this,
                         WebViewScreen.class);
-                intent.putExtra("url", ApiClient.FAQ_URL);
+                intent.putExtra("url", ApiClient.CONTACT_US_URL);
                 setMyIntent(intent);
 
                 break;

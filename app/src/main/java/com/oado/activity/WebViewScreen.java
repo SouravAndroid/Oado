@@ -5,6 +5,7 @@ package com.oado.activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.webkit.WebView;
 
 import com.oado.R;
@@ -24,6 +25,10 @@ public class WebViewScreen extends AppCompatActivity {
         setContentView(R.layout.webview);
         ButterKnife.bind(this);
 
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
 
 
         webview.getSettings().setJavaScriptEnabled(true);
@@ -38,6 +43,20 @@ public class WebViewScreen extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 
+        switch (item.getItemId()){
+
+            case android.R.id.home:
+                finish();
+                break;
+
+            default:
+                break;
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 }

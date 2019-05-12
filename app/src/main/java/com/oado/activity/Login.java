@@ -52,6 +52,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.view_password) ImageView view_password;
     @BindView(R.id.sign_in) Button sign_in;
     @BindView(R.id.forgot_password) TextView forgot_password;
+    @BindView(R.id.tv_about_us) TextView tv_about_us;
+    @BindView(R.id.tv_contact_us) TextView tv_contact_us;
 
 
     boolean showPassword = false;
@@ -96,6 +98,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         view_password.setOnClickListener(this);
         sign_in.setOnClickListener(this);
         forgot_password.setOnClickListener(this);
+        tv_about_us.setOnClickListener(this);
+        tv_contact_us.setOnClickListener(this);
 
 
     }
@@ -134,6 +138,21 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             case R.id.forgot_password:
 
                 forgotPasswordDialog();
+
+                break;
+
+            case R.id.tv_about_us:
+
+                Intent intent = new Intent(Login.this, WebViewScreen.class);
+                intent.putExtra("url", ApiClient.ABOUT_US_URL);
+                startActivity(intent);
+
+                break;
+
+            case R.id.tv_contact_us:
+
+                dialogContactUs();
+
 
                 break;
 
@@ -311,9 +330,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
 
 
-
-
-
     private static final int PERMISSION_REQUEST_CODE = 1;
     private void requestPermission(){
 
@@ -446,5 +462,24 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
 
 
+    private void dialogContactUs(){
+
+        new AlertDialog.Builder(this)
+                .setTitle("Contact Us:")
+                .setMessage("Website: www.oado.in\n" +
+                        "Mail : oado.edu@gmail.com\n" +
+                        "Contact : 9007 20 30 40")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+
+                    }
+
+                })
+                .show();
+
+    }
 
 }
