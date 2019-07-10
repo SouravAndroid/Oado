@@ -396,6 +396,7 @@ public class InAttendanceByTeacher extends AppCompatActivity {
         params.put(ApiClient.institute_id, prefManager.getInstitute_id());
         params.put(ApiClient.class_id, class_id);
         params.put(ApiClient.section_id, section_id);
+        params.put(ApiClient.subject_id, prefManager.getSubject_id());
 
 
         Log.d(Constants.TAG , "get_attendance_list - " + url);

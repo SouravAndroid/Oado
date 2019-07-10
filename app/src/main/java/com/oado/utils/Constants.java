@@ -2,7 +2,7 @@ package com.oado.utils;
 
 public class Constants {
 
-    public static final String DEVELOPER_KEY = "AIzaSyDJa9Ll2ntf64G4jjEh8Uz_PIrbelnuaZI";
+    public static final String DEVELOPER_KEY = "AIzaSyAt2eCVmWQCoy7sww-iTd_r35Qx_i_JOos";
 
     public static final String TAG = "oado";
 

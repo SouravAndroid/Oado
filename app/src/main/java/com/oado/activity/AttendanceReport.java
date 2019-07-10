@@ -494,12 +494,16 @@ public class AttendanceReport extends AppCompatActivity {
 
         params.put(ApiClient.institute_id, prefManager.getInstitute_id());
 
+        params.put(ApiClient.subject_id, prefManager.getSubject_id());
+
         if (userPermissionCheck.isStudent()
                 || userPermissionCheck.isGuardian()){
 
             params.put(ApiClient.class_id, prefManager.getClass_id());
             params.put(ApiClient.section_id, prefManager.getSection_id());
+
         }else {
+
             params.put(ApiClient.class_id, class_id);
             params.put(ApiClient.section_id, section_id);
         }

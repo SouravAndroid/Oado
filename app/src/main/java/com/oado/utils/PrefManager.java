@@ -29,6 +29,7 @@ public class PrefManager {
     private static final String key_guardian_id = "key_guardian_id";
     private static final String key_class_id = "key_class_id";
     private static final String key_section_id = "key_section_id";
+    private static final String key_subject_id = "key_subject_id";
 
     public PrefManager(Context context) {
         this.context = context;
@@ -166,6 +167,18 @@ public class PrefManager {
     public String getSection_id() {
         return pref1.getString(key_section_id, "");
     }
+
+
+    public void setSubject_id(String sid) {
+        editor1.putString(key_subject_id, sid);
+        editor1.commit();
+    }
+
+    public String getSubject_id() {
+        return pref1.getString(key_subject_id, "");
+    }
+
+
 
 
     ///////////////////////// for notification counter ...

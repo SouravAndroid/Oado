@@ -243,6 +243,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                             String institute_id = user_info.optString("institute_id");
                             String guardian_id = user_info.optString("guardian_id");
                             String student_id = user_info.optString("student_id");
+                            String subject_id = user_info.optString("subject_id");
 
 
                             prefManager.setUserData(id, name, email, phone_no, image,
@@ -258,6 +259,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                             Toasty.success(getApplicationContext(),
                                     message,
                                     Toast.LENGTH_LONG, true).show();
+
+                            if (login_type.equals(ApiClient.teacher)){
+
+                                prefManager.setSubject_id(subject_id);
+                            }
 
 
                             if (login_type.equals(ApiClient.institute)){
